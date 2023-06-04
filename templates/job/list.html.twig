@@ -1,0 +1,45 @@
+
+{% extends "base.html.twig" %}
+{% block body %}
+
+<h2>Liste des jobs | <small> <a href="{{ path('Ajouter')}}">Ajouter</a>
+    </small></h2>
+{% for msg in app.flashes('notice') %}
+    {{ msg }}
+
+{% endfor %}
+{{ form_start(form1) }}
+{{ form_widget(form1) }}
+{{ form_end(form1) }}
+<table class="table table-hover table-striped" border="1">
+
+    <table class="table table-hover table-striped" border="1">
+        <thead>
+
+            <th>ID</th>
+            <th>description</th>
+            <th>type</th>
+            <th>date</th>
+            <th>e-mail</th>
+            <th>action</th>
+        </thead>
+
+        <tbody>
+        {% for job in lesjobs %}
+            <tr>
+                <td>{{ job.id }}</td>
+                <td>{{ job.type}}</td>
+                <td>{{ job.type | upper}}</td>
+                <td>{{ job.getExpiresAt |date('d-m-Y')}}</td>
+                <td>{{ job.email }}</td>
+                <td>
+                    <a class="btn btn-danger" href="">Supprimer</a>
+                    <a class="btn btn-success" href="">Modifier</a>
+                    <a class="btn btn-info" href="#">Ajout</a>
+
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}

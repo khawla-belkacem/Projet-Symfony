@@ -1,0 +1,22 @@
+article1:
+  titre: 'titre de mon Article1'
+  auteur:
+    prenom: 'victor'
+    nom: 'hugo'
+article2:
+  titre: 'titre de mon Article2'
+  auteur:
+    prenom: 'guy'
+    nom: 'Mauppasant'
+
+article3:
+  titre: 'titre de mon Article3'
+  auteur:
+    prenom: 'victor'
+    nom: 'hugo'
+
+article4:
+  titre: 'titre de mon Article4'
+  auteur:
+    prenom: 'victor'
+    nom: 'hugo'
